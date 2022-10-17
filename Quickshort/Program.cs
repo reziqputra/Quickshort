@@ -115,6 +115,25 @@ namespace QuickSort
             Console.WriteLine("\nNumber of comparisons" + cmp_count);
             Console.WriteLine("\nNumber of data movemenets: " + mov_count);
         }
-        
+        int getSize()
+        {
+            return (n);
+        }
+        static void Main(string[]args)
+        {
+            //declaring the object the class
+            Program myList = new Program();
+            //Accept array elements
+            myList.read();
+            //calling the sorting function
+            //first call to quick sort algorithm
+            myList.q_sort(0, myList.getSize() - 1);
+            //display sorted array
+            myList.display();
+            //to exit from the console
+            Console.WriteLine("\n\nPress enter to exit.");
+            Console.Read();
+        }
+
     }
 }
